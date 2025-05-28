@@ -12,8 +12,9 @@ void push(int data)
     }
     else
     {
-        stack[top++] = data;
+        printf("data insert%d",data);
     }
+    stack[top++] = data;
 }
 void pop()
 {
@@ -24,8 +25,9 @@ void pop()
     else
     {
         printf("%d", stack[top]);
-        top--;
+        
     }
+    top--;
 }
 void display()
 {
@@ -36,7 +38,7 @@ void display()
     else
     {
         printf("Stack elments:\n");
-        for (int i = top; i >= 0; i--)
+        for (int i = 0; i <= top; i++)
         {
             printf("%d\n", stack[i]);
         }
@@ -65,7 +67,7 @@ int main()
             display();
             break;
         case 4:
-            exit(0);
+            exit(1);
             break;
         default:
             printf("Wrong choice");
